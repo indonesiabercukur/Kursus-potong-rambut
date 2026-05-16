@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Kursus Barber Skill Academy</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f4f7ff;
+  color:#1f2937;
+}
+
+.wrapper{
+  max-width:480px;
+  margin:auto;
+  min-height:100vh;
+  background:white;
+}
+
+/* HERO */
+
+.hero{
+  background:linear-gradient(135deg,#4338ca,#6d28d9);
+  padding:30px 22px 90px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:'';
+  position:absolute;
+  width:220px;
+  height:220px;
+  background:rgba(255,255,255,0.08);
+  border-radius:50%;
+  top:-80px;
+  right:-70px;
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  background:rgba(255,255,255,0.15);
+  color:white;
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  backdrop-filter:blur(10px);
+}
+
+.hero h1{
+  color:white;
+  font-size:30px;
+  line-height:1.3;
+  margin-top:22px;
+  font-weight:800;
+}
+
+.hero p{
+  color:rgba(255,255,255,0.9);
+  margin-top:15px;
+  line-height:1.8;
+  font-size:15px;
+}
+
+/* CARD */
+
+.card{
+  background:white;
+  margin:-55px 18px 0;
+  border-radius:28px;
+  padding:22px;
+  box-shadow:0 10px 40px rgba(0,0,0,0.08);
+}
+
+/* BUTTONS */
+
+.btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  width:100%;
+  border-radius:18px;
+  padding:18px;
+  font-weight:700;
+  font-size:16px;
+  margin-top:15px;
+  transition:0.2s;
+}
+
+.btn:active{
+  transform:scale(0.98);
+}
+
+.btn-course{
+  background:#111827;
+  color:white;
+}
+
+.btn-buy{
+  background:linear-gradient(135deg,#00b894,#00d2a0);
+  color:white;
+  box-shadow:0 10px 25px rgba(0,184,148,0.25);
+}
+
+/* REFERRAL */
+
+.referral{
+  margin-top:28px;
+  background:#f8fffd;
+  border:2px dashed #00b894;
+  border-radius:24px;
+  padding:22px;
+  text-align:center;
+}
+
+.referral small{
+  color:#6b7280;
+  font-weight:500;
+}
+
+.referral-code{
+  margin-top:12px;
+  font-size:30px;
+  font-weight:800;
+  letter-spacing:1px;
+  color:#111827;
+  word-break:break-word;
+}
+
+.copy-btn{
+  width:100%;
+  margin-top:18px;
+  border:none;
+  background:#00b894;
+  color:white;
+  padding:16px;
+  border-radius:16px;
+  font-size:16px;
+  font-weight:700;
+  cursor:pointer;
+}
+
+.copy-btn:active{
+  transform:scale(0.98);
+}
+
+/* STEP */
+
+.section-title{
+  font-size:22px;
+  font-weight:800;
+  margin-top:34px;
+  margin-bottom:18px;
+}
+
+.steps{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+.step{
+  display:flex;
+  align-items:flex-start;
+  gap:14px;
+  background:#f8fafc;
+  padding:16px;
+  border-radius:18px;
+}
+
+.number{
+  min-width:34px;
+  height:34px;
+  background:#4f46e5;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-weight:700;
+  font-size:14px;
+}
+
+.step p{
+  font-size:14px;
+  line-height:1.7;
+  color:#374151;
+}
+
+/* BENEFITS */
+
+.benefits{
+  margin-top:12px;
+  display:grid;
+  gap:12px;
+}
+
+.benefit{
+  background:#f9fafb;
+  border-radius:18px;
+  padding:16px;
+  font-size:14px;
+  font-weight:600;
+  color:#374151;
+}
+
+/* CTA BOTTOM */
+
+.bottom-cta{
+  margin-top:28px;
+  padding:22px;
+  border-radius:24px;
+  background:linear-gradient(135deg,#111827,#1f2937);
+  color:white;
+  text-align:center;
+}
+
+.bottom-cta h3{
+  font-size:22px;
+  line-height:1.4;
+}
+
+.bottom-cta p{
+  margin-top:10px;
+  color:rgba(255,255,255,0.8);
+  line-height:1.8;
+  font-size:14px;
+}
+
+/* FOOTER */
+
+.footer{
+  text-align:center;
+  padding:28px 20px 40px;
+  color:#9ca3af;
+  font-size:12px;
+}
+
+/* MOBILE */
+
+@media(max-width:380px){
+
+  .hero h1{
+    font-size:25px;
+  }
+
+  .referral-code{
+    font-size:24px;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="badge">
+      ✂️ Kursus Online Barber
+    </div>
+
+    <h1>
+      Belajar Teknik Cukur Rambut & Janggut Profesional
+    </h1>
+
+    <p>
+      Cocok untuk pemula atau kapster yang ingin meningkatkan skill barbershop langsung dari pakar barber pemilik Hairnerds Studio
+    </p>
+
+  </section>
+
+  <!-- CARD -->
+  <div class="card">
+
+    <!-- BUTTON -->
+    <a
+      class="btn btn-course"
+      href="https://skillacademy.com/p/belajar-teknik-cukur-rambut-dan-janggut-untuk-kapster?courseType=SingleCourse"
+      target="_blank"
+    >
+      📘 Lihat Detail Kursus
+    </a>
+
+    <a
+      class="btn btn-buy"
+      href="https://skillacademy.com/payment/order/COURSE-EZ7HZ2LR?productType=onlineCourse"
+      target="_blank"
+    >
+      🚀 Beli Kursus Sekarang
+    </a>
+
+    <!-- REFERRAL -->
+    <div class="referral">
+
+      <small> Pastikan Salin dan Masukkan Kode Referral ini untuk dapatkan CASHBACK dan PROMO saat pembayaran </small>
+
+      <div class="referral-code" id="refCode">
+        USERLN2CTU0F
+      </div>
+
+      <button class="copy-btn" onclick="copyReferral()">
+        📋 Copy Kode Referral
+      </button>
+
+    </div>
+
+    <!-- BENEFITS -->
+    <h2 class="section-title">
+      Kenapa Kursus Ini?
+    </h2>
+
+    <div class="benefits">
+
+      <div class="benefit">
+        ✅ Belajar langsung dari HP
+      </div>
+
+      <div class="benefit">
+        ✅ Cocok untuk pemula
+      </div>
+
+      <div class="benefit">
+        ✅ Bisa jadi peluang usaha barber
+      </div>
+
+      <div class="benefit">
+        ✅ Materi teknik cukur & janggut
+      </div>
+
+    </div>
+
+    <!-- STEPS -->
+    <h2 class="section-title">
+      Cara Menggunakan Referral
+    </h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <div class="number">1</div>
+        <p>
+          Klik tombol <b>Beli Kursus Sekarang</b>
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <p>
+          Copy kode referral di halaman ini
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <p>
+          Paste kode referral saat checkout pembayaran
+        </p>
+      </div>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="bottom-cta">
+
+      <h3>
+        Mulai Skill Barber-mu Hari Ini ✂️
+      </h3>
+
+      <p>
+        Peluang kerja & usaha barber terus meningkat. Mulai belajar sekarang langsung dari rumah.
+      </p>
+
+      <a
+        class="btn btn-buy"
+        href="https://skillacademy.com/payment/order/COURSE-EZ7HZ2LR?productType=onlineCourse"
+        target="_blank"
+      >
+        🔥 Ambil Kursus Sekarang
+      </a>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    © Indonesia Bercukur | Gaya - Karya - Budaya
+  </div>
+
+</div>
+
+<script>
+
+function copyReferral(){
+
+  const code = "USERLN2CTU0F";
+
+  navigator.clipboard.writeText(code);
+
+  const btn = document.querySelector(".copy-btn");
+
+  btn.innerHTML = "✅ Kode Berhasil Dicopy";
+
+  setTimeout(() => {
+    btn.innerHTML = "📋 Copy Kode Referral";
+  }, 2500);
+
+}
+
+</script>
+
+</body>
+</html>
